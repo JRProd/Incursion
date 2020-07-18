@@ -12,6 +12,10 @@
 #include "Game/Game.hpp"
 #include "Game/Map/Map.hpp"
 
+
+#include "Engine/Core/Math/Primatives/LineSeg2D.hpp"
+#include "Engine/Renderer/Mesh/MeshUtils.hpp"
+
 //-------------------------------------------------------------------------------
 Entity::Entity( Game* gameInstance,
                 Map* currentMap,
@@ -142,22 +146,25 @@ void Entity::Update( float deltaSeconds )
 //-------------------------------------------------------------------------------
 void Entity::DebugRender() const
 {
-    g_Renderer->BindTexture( nullptr );
+    std::vector<VertexMaster> debugVisual;
     // Draw debug velocity
-//     g_Renderer->DrawLine( Vec2( m_Position.x, m_Position.y ),
-//                           Vec2( m_Position.x, m_Position.y ) +
-//                           Vec2( m_Velocity.x, m_Velocity.y ),
-//                           Rgba8( 255, 255, 0 ), .05f );
-//            // Draw Physics circle
-//     g_Renderer->DrawDiscPerimeter( Disc( Vec2( m_Position.x, m_Position.y ),
-//                                 m_PhysicsRadius * m_Scale.x ),
-//                           Rgba8::CYAN,
-//                           .025f );
-//          // Draw Cosmetic circle
-//     g_Renderer->DrawDiscPerimeter( Disc( Vec2( m_Position.x, m_Position.y ),
-//                                 m_CosmeticRadius * m_Scale.x ),
-//                           Rgba8::MAGENTA,
-//                           .025f );
+    AppendLine( debugVisual, LineSeg2D(Vec2( m_Position.x, m_Position.y ),
+                          Vec2( m_Position.x, m_Position.y ) +
+                          Vec2( m_Velocity.x, m_Velocity.y ) ),
+                          Rgba8( 255, 255, 0 ), .05f );
+           // Draw Physics circle
+    AppendDiscPerimeter(debugVisual, Disc( Vec2( m_Position.x, m_Position.y ),
+                                m_PhysicsRadius * m_Scale.x ),
+                          Rgba8::CYAN,
+                          .025f );
+         // Draw Cosmetic circle
+    AppendDiscPerimeter( debugVisual, Disc( Vec2( m_Position.x, m_Position.y ),
+                                m_CosmeticRadius * m_Scale.x ),
+                          Rgba8::MAGENTA,
+                          .025f );
+
+    g_Renderer->BindTexture( nullptr );
+    g_Renderer->DrawVertexArray( debugVisual );
 }
 
 void Entity::Destroy()

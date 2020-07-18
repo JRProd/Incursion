@@ -88,14 +88,18 @@ void Map::DebugRender() const
 {
     DebugRenderEntities();
 
-    // for ( int tileIndex = 0; tileIndex < m_Tiles.size(); ++tileIndex )
-    // {
-    //     const Tile& currentTile = m_Tiles.at( tileIndex );
-    //     if ( currentTile.IsSolid() )
-    //     {
-    //         g_Renderer->DrawAABB2( currentTile.GetTileBoundingBox(), Rgba8::CYAN );
-    //     }
-    // }
+    std::vector<VertexMaster> collisionVisual;
+    for ( int tileIndex = 0; tileIndex < m_Tiles.size(); ++tileIndex )
+    {
+        const Tile& currentTile = m_Tiles.at( tileIndex );
+        if ( currentTile.IsSolid() )
+        {
+            AppendAABB2( collisionVisual, currentTile.GetTileBoundingBox(), Rgba8::CYAN );
+        }
+    }
+
+    g_Renderer->BindTexture( nullptr );
+    g_Renderer->DrawVertexArray( collisionVisual );
 }
 
 void Map::Destroy()
