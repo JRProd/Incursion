@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Framework">
+      <UniqueIdentifier>{8749cf07-6e27-4e54-a8f3-86ef9609fdff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{7f0d2776-8b85-42f4-af08-712f569535b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity">
+      <UniqueIdentifier>{ce4e4778-e218-4f6a-b255-12f5df7dfe02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Map">
+      <UniqueIdentifier>{a0123728-bde0-4577-8480-8dc50e35ec86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Map\Generation">
+      <UniqueIdentifier>{0cde96f3-dc48-4010-9a60-353ce1af06cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\AssetManagers">
+      <UniqueIdentifier>{a2d41126-cc53-48bb-84be-de19e379ccac}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main_Windows.cpp">
+      <Filter>Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="App.cpp">
+      <Filter>Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity\Entity.cpp">
+      <Filter>Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="GameCommon.cpp">
+      <Filter>Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity\Debris.cpp">
+      <Filter>Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Map\Map.cpp">
+      <Filter>Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Map\Tile.cpp">
+      <Filter>Map</Filter>
+    </ClCompile>
+    <ClCompile Include="World.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity\PlayerCharacter.cpp">
+      <Filter>Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Map\TileDefinition.cpp">
+      <Filter>Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Map\Raycast.cpp">
+      <Filter>Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity\Bullet.cpp">
+      <Filter>Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity\TankNPC.cpp">
+      <Filter>Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity\Bolder.cpp">
+      <Filter>Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity\TurretNPC.cpp">
+      <Filter>Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity\Explosion.cpp">
+      <Filter>Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Map\Generation\MapGeneration.cpp">
+      <Filter>Map\Generation</Filter>
+    </ClCompile>
+    <ClCompile Include="Map\Generation\Worm.cpp">
+      <Filter>Map\Generation</Filter>
+    </ClCompile>
+    <ClCompile Include="Map\Generation\DrunkenWorm.cpp">
+      <Filter>Map\Generation</Filter>
+    </ClCompile>
+    <ClCompile Include="AssetManagers\AudioManager.cpp">
+      <Filter>Game\AssetManagers</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="App.hpp">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="GameCommon.hpp">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity\Entity.hpp">
+      <Filter>Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity\Debris.hpp">
+      <Filter>Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Map\Map.hpp">
+      <Filter>Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Map\Tile.hpp">
+      <Filter>Map</Filter>
+    </ClInclude>
+    <ClInclude Include="World.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity\PlayerCharacter.hpp">
+      <Filter>Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineBuildPreferences.hpp" />
+    <ClInclude Include="Map\TileDefinition.hpp">
+      <Filter>Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Map\Raycast.hpp">
+      <Filter>Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity\Bullet.hpp">
+      <Filter>Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity\TankNPC.hpp">
+      <Filter>Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity\TurretNPC.hpp">
+      <Filter>Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity\Bolder.hpp">
+      <Filter>Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity\Explosion.hpp">
+      <Filter>Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Map\Generation\MapGeneration.hpp">
+      <Filter>Map\Generation</Filter>
+    </ClInclude>
+    <ClInclude Include="Map\Generation\Worm.hpp">
+      <Filter>Map\Generation</Filter>
+    </ClInclude>
+    <ClInclude Include="Map\Generation\DrunkenWorm.hpp">
+      <Filter>Map\Generation</Filter>
+    </ClInclude>
+    <ClInclude Include="AssetManagers\TextureManager.hpp">
+      <Filter>Game\AssetManagers</Filter>
+    </ClInclude>
+    <ClInclude Include="AssetManagers\AudioManager.hpp">
+      <Filter>Game\AssetManagers</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
