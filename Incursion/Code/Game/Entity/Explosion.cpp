@@ -41,6 +41,8 @@ void Explosion::Create()
     m_ExplosionAnimStartTime = m_Age;
 
     m_AddativeShader = new Shader( g_Renderer->CreateOrGetShaderProgramFromFile( "DEFAULT" ) );
+    m_AddativeShader->depthCompare = DepthCompare::ALWAYS;
+    m_AddativeShader->writeDepth = false;
     m_AddativeShader->blendMode = BlendMode::ADDITIVE;
 }
 
@@ -72,7 +74,6 @@ void Explosion::Render() const
     std::vector<VertexMaster> visual;
     AppendAABB2( visual, box, Rgba8::WHITE, minUv, maxUv );
     TransformVertexArray( visual, static_cast<Vec2>(m_Position), m_AngleDegrees, static_cast<Vec2>(m_Scale) );
-
 
     g_Renderer->BindShader( m_AddativeShader );
     g_Renderer->BindTexture( &m_Sprite->GetTexture() );
